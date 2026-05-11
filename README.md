@@ -1,16 +1,42 @@
-# SpeechInfra HK Frontend Prototype
+# SpeechInfra HK Frontend MVP
 
-A first-pass Next.js frontend prototype for a Hong Kong-based AI speech data infrastructure platform.
+A multi-page Next.js frontend MVP for a Hong Kong-based AI speech data infrastructure platform.
 
 ## What is included
 
+### Public prototype
+
 - Enterprise-style landing page
-- Contributor onboarding flow
-- Consent Centre interaction
-- Recording Studio mockup
+- Contributor onboarding explanation
+- Consent Centre preview
+- Recording Studio preview
 - Dataset processing pipeline
-- Enterprise dataset catalogue
+- Enterprise dataset catalogue preview
 - Hong Kong deployment architecture section
+
+### App routes now included
+
+```text
+/
+/contributor/dashboard
+/contributor/consent
+/contributor/recording/tasks
+/contributor/recording/task/[taskId]
+/contributor/submissions
+/reviewer/dashboard
+/reviewer/clip/[clipId]
+/admin/dashboard
+/enterprise/datasets
+/enterprise/datasets/[datasetId]
+```
+
+### Role flows now represented
+
+- Contributor dashboard and task flow
+- Structured consent flow
+- Reviewer queue and clip review page
+- Admin operations dashboard
+- Enterprise dataset catalogue and data-room style detail page
 
 ## Run locally
 
@@ -23,17 +49,18 @@ Then open `http://localhost:3000`.
 
 ## Current status
 
-This is a frontend-only prototype. It intentionally uses mock data and no backend integration yet.
+This is still a frontend-only MVP using mock data. It is now structured for backend integration rather than remaining a single landing-page prototype.
 
-## Recommended next steps
+## Recommended next implementation steps
 
-1. Split the single page into reusable components
-2. Add App Router routes for contributor, reviewer, admin and enterprise portals
-3. Implement real authentication
-4. Implement MediaRecorder-based audio recording
-5. Implement signed URL upload flow
-6. Connect consent and contributor APIs
-7. Add reviewer dashboard and dataset management pages
+1. Add route guards and real authentication
+2. Implement MediaRecorder-based audio recording
+3. Implement signed URL upload flow
+4. Connect contributor, consent and task APIs
+5. Add reviewer decision mutations
+6. Add admin task creation and dataset builder pages
+7. Add enterprise data room access control
+8. Add compliance routes and audit log screens
 
 ## Product principle
 
